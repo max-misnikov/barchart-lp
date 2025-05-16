@@ -481,6 +481,7 @@ button {
   font-size: 18px;
   font-weight: 700;
   padding: 20px 20px;
+  outline: none;
   width: 230px;
   transition: 0.4s ease;
 }
@@ -690,10 +691,7 @@ button:hover {
   position: absolute;
   top: 0;
   width: 700px;
-  -webkit-animation: axis-rotate 5s infinite alternate ease-in-out;
-  -webkit-animation-fill-mode: both;
-  animation: axis-rotate 5s infinite alternate ease-in-out;
-  animation-fill-mode: both;
+  z-index: -1;
 }
 @media only screen and (max-width: 980px) {
   .inst-widget {
