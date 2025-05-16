@@ -1,0 +1,30 @@
+// Breakpoints
+$md-screen: 750px !default;
+$lg-screen: 980px !default;
+$xlg-screen: 1200px !default;
+
+
+// Colors
+$gray-color: #b4b4b4;
+$light-blue-color: #11afff;
+$blue-color: #0c2780;
+$dark-blue-color: #0c527f;
+$purple-color: #553877;
+
+// Typography
+$em-size: 16px;
+$font-family: "Poppins", sans-serif !default;
+
+$text-small: em-calc(14px);
+$text-body: em-calc(16px);
+$text-title: em-calc(20px);
+
+// Grid variables
+$container-width: 1180px !default;
+
+// Misc
+$border-radius: 4px !default;
+
+// Element declarations
+$header-height: 60px;
+$footer-height: 80px;

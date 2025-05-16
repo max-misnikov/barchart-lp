@@ -1,0 +1,73 @@
+html,
+body {
+    height: 100%;
+}
+
+body {
+    background: url(../assets/bg-blue-repeat.png) repeat;
+    font-family: $font-family;
+}
+
+.content-wrapper {
+    margin: 0 auto;
+    max-width: $container-width;
+    padding: 0 20px;
+
+    &.full-height {
+        min-height: calc(100vh - #{$header-height + $footer-height});
+    }
+}
+
+.dummy-content {
+    padding: 60px 0 20px;
+    text-align: center;
+}
+
+.title {
+    font-size: $text-title;
+}
+
+p {
+    font-size: $text-body;
+}
+
+.disclaimer {
+    color: $gray-color;
+    font-size: $text-small;
+}
+
+button {
+    border: none;
+    border-radius: 10px;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 700;
+    padding: 20px 20px;
+    width: 230px;
+    transition: .4s ease;
+
+    @include lg-screen {
+        font-size: 16px;
+        padding: 10px 20px;
+        width: 180px;
+    }
+
+
+    &.fill {
+        background: $light-blue-color;
+    }
+
+    &.stroke {
+        background: none;
+        border: 1px solid #fff;
+
+        &:hover {
+            background: #fff;
+            color: $blue-color;
+        }
+    }
+
+    &:hover {
+        background: lighten($light-blue-color, 10%);
+    }
+}

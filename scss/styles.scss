@@ -1,0 +1,13 @@
+// Base files
+@import "base/normalize";
+@import "base/utils";
+@import "base/variables";
+@import "base/base-styles";
+@import "base/typography";
+@import "base/animation";
+
+// Components
+@import "components/global";
+@import "components/hero";
+@import "components/sections";
+@import "components/footer";

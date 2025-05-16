@@ -1,0 +1,160 @@
+.hero-section {
+    display: flex;
+
+    @include lg-screen {
+        flex-direction: column;
+    }
+
+    .logo {
+        display: flex;
+        margin-top: 56px;
+
+        @include lg-screen {
+            justify-content: center;
+        }
+
+        img {
+            height: 50px;
+        }
+    }
+
+    .main-title {
+        font-size: 64px;
+        line-height: 1;
+        margin-top: 104px;
+
+        @include lg-screen {
+            font-size: 41px;
+            margin-top: 50px;
+        }
+
+        span {
+            display: block;
+            margin-top: 4px;
+
+            &:last-of-type {
+                color: $light-blue-color;
+                font-size: 70px;
+                font-weight: 700;
+
+                @include lg-screen {
+                    font-size: 44px;
+                }
+
+                // @include sm-screen {
+                //     font-size: 54px;
+                // }
+            }
+        }
+    }
+
+    .subtitle {
+        font-size: 30px;
+        margin-top: 5px;
+
+        @include lg-screen {
+            font-size: 21px;
+        }
+
+        @include xlg-screen {
+            font-size: 24px;
+        }
+    }
+
+    .button-strip {
+        display: flex;
+        margin-top: 30px;
+
+        @include lg-screen {
+            justify-content: center;
+        }
+    }
+
+    button.stroke {
+        margin-left: 10px;
+    }
+}
+
+.partnership {
+    font-size: 20px;
+    margin-top: 12px;
+}
+
+.barchart-logo {
+    height: 24px;
+    margin-left: 5px;
+    position: relative;
+    top: 1px;
+    vertical-align: baseline;
+}
+
+.trust-strip {
+    display: block;
+    margin-top: 30px;
+
+    img {
+        width: 570px;
+
+        @include lg-screen {
+            display: none;
+        }
+        
+        &.mobile {
+            display: none;
+            margin: 0 auto;
+            width: 100%;
+            
+            @include lg-screen {
+                display: block;
+                margin-bottom: 60px;
+            }
+        }
+
+    }
+}
+
+.devices {
+    display: flex;
+    position: relative;
+
+    @include lg-screen {
+        justify-content: center;
+    }
+
+    img {
+        object-fit: contain;
+        position: relative;
+        top: 162px;
+        width: 270px;
+
+        @include lg-screen {
+            top: 20px;
+            width: 240px;
+        }
+    }
+
+    .device-upper {
+        top: 130px;
+        right: 35px;
+        @include animation(slow-hover 5s infinite alternate ease-in-out);
+
+        @include lg-screen {
+            top: 20px;
+            right: 50px;
+        }
+    }
+
+    .device-lower {
+        right: -110px;
+        @include animation(slow-hover 5s infinite alternate-reverse ease-in-out);
+
+        @include lg-screen {
+            top: 40px;
+            right: -60px;
+        }
+    }
+
+    @include lg-screen {
+        // position: absolute;
+    }
+}

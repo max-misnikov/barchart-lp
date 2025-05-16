@@ -1,0 +1,28 @@
+footer {
+    background: linear-gradient(to top,rgba(11, 24, 59, 1) 60%, rgba(11, 24, 59, 0) 100%);
+    text-align: center;
+    padding: 40px 0;
+    padding-top: 140px;
+    
+    img {
+        height: 20px;
+    }
+    
+    span {
+        color: #fff;
+        display: block;
+        font-size: 12px;
+        padding-top: 8px;
+    }
+
+    .disclaimers {
+        font-size: .9rem;
+        margin: 0 auto;
+        margin-bottom: 4rem;
+        width: 75%;
+
+        @include lg-screen {
+            width: 100%;
+        }
+    }
+}
