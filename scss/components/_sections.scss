@@ -180,6 +180,7 @@
 
     @include lg-screen {
         justify-content: center;
+        padding-top: 10px;
     }
 }
 
@@ -188,6 +189,7 @@
     width: 650px;
     
     @include lg-screen {
+        margin-top: 40px;
         width: 90%;
     }
 }

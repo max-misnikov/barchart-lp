@@ -833,6 +833,7 @@ button:hover {
 @media only screen and (max-width: 980px) {
   .payments {
     justify-content: center;
+    padding-top: 10px;
   }
 }
 
@@ -842,6 +843,7 @@ button:hover {
 }
 @media only screen and (max-width: 980px) {
   .payment-options {
+    margin-top: 40px;
     width: 90%;
   }
 }
