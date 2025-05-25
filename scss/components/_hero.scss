@@ -20,11 +20,12 @@
 
     .main-title {
         font-size: 64px;
+        font-weight: 400;
         line-height: 1;
         margin-top: 104px;
 
         @include lg-screen {
-            font-size: 41px;
+            font-size: 35px;
             margin-top: 50px;
         }
 
@@ -38,7 +39,7 @@
                 font-weight: 700;
 
                 @include lg-screen {
-                    font-size: 44px;
+                    font-size: 38px;
                 }
 
                 // @include sm-screen {
@@ -54,10 +55,7 @@
 
         @include lg-screen {
             font-size: 21px;
-        }
-
-        @include xlg-screen {
-            font-size: 24px;
+            line-height: 1.2;
         }
     }
 
@@ -82,7 +80,6 @@
 
 .barchart-logo {
     height: 24px;
-    margin-left: 5px;
     position: relative;
     top: 1px;
     vertical-align: baseline;
@@ -91,6 +88,10 @@
 .trust-strip {
     display: block;
     margin-top: 30px;
+
+    @include lg-screen {
+        margin-top: 0;
+    }
 
     img {
         width: 570px;
@@ -140,7 +141,7 @@
 
         @include lg-screen {
             top: 20px;
-            right: 50px;
+            right: 70px;
         }
     }
 
@@ -150,7 +151,7 @@
 
         @include lg-screen {
             top: 40px;
-            right: -60px;
+            right: -50px;
         }
     }
 

@@ -481,13 +481,14 @@ button {
   font-size: 18px;
   font-weight: 700;
   padding: 20px 20px;
+  outline: none;
   width: 230px;
   transition: 0.4s ease;
 }
 @media only screen and (max-width: 980px) {
   button {
-    font-size: 16px;
-    padding: 10px 20px;
+    font-size: 14px;
+    padding: 10px 16px;
     width: 180px;
   }
 }
@@ -528,12 +529,13 @@ button:hover {
 }
 .hero-section .main-title {
   font-size: 64px;
+  font-weight: 400;
   line-height: 1;
   margin-top: 104px;
 }
 @media only screen and (max-width: 980px) {
   .hero-section .main-title {
-    font-size: 41px;
+    font-size: 35px;
     margin-top: 50px;
   }
 }
@@ -548,7 +550,7 @@ button:hover {
 }
 @media only screen and (max-width: 980px) {
   .hero-section .main-title span:last-of-type {
-    font-size: 44px;
+    font-size: 38px;
   }
 }
 .hero-section .subtitle {
@@ -558,11 +560,7 @@ button:hover {
 @media only screen and (max-width: 980px) {
   .hero-section .subtitle {
     font-size: 21px;
-  }
-}
-@media only screen and (max-width: 1200px) {
-  .hero-section .subtitle {
-    font-size: 24px;
+    line-height: 1.2;
   }
 }
 .hero-section .button-strip {
@@ -585,7 +583,6 @@ button:hover {
 
 .barchart-logo {
   height: 24px;
-  margin-left: 5px;
   position: relative;
   top: 1px;
   vertical-align: baseline;
@@ -594,6 +591,11 @@ button:hover {
 .trust-strip {
   display: block;
   margin-top: 30px;
+}
+@media only screen and (max-width: 980px) {
+  .trust-strip {
+    margin-top: 0;
+  }
 }
 .trust-strip img {
   width: 570px;
@@ -648,7 +650,7 @@ button:hover {
 @media only screen and (max-width: 980px) {
   .devices .device-upper {
     top: 20px;
-    right: 50px;
+    right: 70px;
   }
 }
 .devices .device-lower {
@@ -661,7 +663,7 @@ button:hover {
 @media only screen and (max-width: 980px) {
   .devices .device-lower {
     top: 40px;
-    right: -60px;
+    right: -50px;
   }
 }
 .instruments {
@@ -674,6 +676,7 @@ button:hover {
   .instruments {
     flex-direction: column-reverse;
     padding-top: 0;
+    overflow: hidden;
   }
 }
 .instruments .content {
@@ -690,17 +693,19 @@ button:hover {
   position: absolute;
   top: 0;
   width: 700px;
+  transform: rotate3d(1, 1, 1, 15deg);
   -webkit-animation: axis-rotate 5s infinite alternate ease-in-out;
   -webkit-animation-fill-mode: both;
   animation: axis-rotate 5s infinite alternate ease-in-out;
   animation-fill-mode: both;
+  z-index: -1;
 }
 @media only screen and (max-width: 980px) {
   .inst-widget {
-    left: 0;
+    left: -12%;
     position: relative;
-    top: -60px;
-    width: 100%;
+    top: -40px;
+    width: 130%;
   }
 }
 .inst-widget:hover {
