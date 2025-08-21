@@ -498,6 +498,8 @@ button {
   button {
     font-size: 14px;
     padding: 10px 16px;
+    font-size: 14px;
+    padding: 10px 16px;
     width: 180px;
   }
 }
@@ -735,11 +737,13 @@ nav label::after {
 .hero-section .main-title {
   font-size: 64px;
   font-weight: 400;
+  font-weight: 400;
   line-height: 1;
   margin-top: 54px;
 }
 @media only screen and (max-width: 980px) {
   .hero-section .main-title {
+    font-size: 35px;
     font-size: 35px;
     margin-top: 50px;
   }
@@ -766,6 +770,14 @@ nav label::after {
   color: #11afff;
   margin: 0 8px;
 }
+.hero-section .perks {
+  margin-top: 2rem;
+  font-size: 18px;
+}
+.hero-section .divider {
+  color: #11afff;
+  margin: 0 8px;
+}
 .hero-section .subtitle {
   font-size: 30px;
   margin-top: 5px;
@@ -773,6 +785,7 @@ nav label::after {
 @media only screen and (max-width: 980px) {
   .hero-section .subtitle {
     font-size: 21px;
+    line-height: 1.2;
     line-height: 1.2;
   }
 }
@@ -805,6 +818,11 @@ nav label::after {
 .trust-strip {
   display: block;
   margin-top: 30px;
+}
+@media only screen and (max-width: 980px) {
+  .trust-strip {
+    margin-top: 0;
+  }
 }
 @media only screen and (max-width: 980px) {
   .trust-strip {
@@ -865,6 +883,7 @@ nav label::after {
 @media only screen and (max-width: 980px) {
   .devices .device-upper {
     top: 20px;
+    right: 70px;
     right: 70px;
   }
 }
@@ -946,6 +965,7 @@ nav label::after {
     flex-direction: column-reverse;
     padding-top: 0;
     overflow: hidden;
+    overflow: hidden;
   }
 }
 .instruments .content {
@@ -963,16 +983,21 @@ nav label::after {
   top: 0;
   width: 700px;
   transform: rotate3d(1, 1, 1, 15deg);
+  transform: rotate3d(1, 1, 1, 15deg);
   -webkit-animation: axis-rotate 5s infinite alternate ease-in-out;
   -webkit-animation-fill-mode: both;
   animation: axis-rotate 5s infinite alternate ease-in-out;
   animation-fill-mode: both;
   z-index: -1;
+  z-index: -1;
 }
 @media only screen and (max-width: 980px) {
   .inst-widget {
     left: -12%;
+    left: -12%;
     position: relative;
+    top: -40px;
+    width: 130%;
     top: -40px;
     width: 130%;
   }
