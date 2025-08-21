@@ -7,7 +7,7 @@
 
     .logo {
         display: flex;
-        margin-top: 56px;
+        margin-top: 95px;
 
         @include lg-screen {
             justify-content: center;
@@ -22,7 +22,7 @@
         font-size: 64px;
         font-weight: 400;
         line-height: 1;
-        margin-top: 104px;
+        margin-top: 54px;
 
         @include lg-screen {
             font-size: 35px;
@@ -31,15 +31,15 @@
 
         span {
             display: block;
-            margin-top: 4px;
+            margin-top: 12px;
 
             &:last-of-type {
                 color: $light-blue-color;
-                font-size: 70px;
-                font-weight: 700;
+                font-size: 36px;
+                font-weight: 600;
 
                 @include lg-screen {
-                    font-size: 38px;
+                    font-size: 24px;
                 }
 
                 // @include sm-screen {
@@ -47,6 +47,16 @@
                 // }
             }
         }
+    }
+
+    .perks {
+        margin-top: 2rem;
+        font-size: 18px;
+    }
+
+    .divider {
+        color: $light-blue-color;
+        margin: 0 8px;
     }
 
     .subtitle {
@@ -61,7 +71,7 @@
 
     .button-strip {
         display: flex;
-        margin-top: 30px;
+        margin-top: 3rem;
 
         @include lg-screen {
             justify-content: center;
@@ -69,6 +79,7 @@
     }
 
     button.stroke {
+        display: none;
         margin-left: 10px;
     }
 }
@@ -107,7 +118,8 @@
             
             @include lg-screen {
                 display: block;
-                margin-bottom: 60px;
+                margin-bottom: 30px;
+                margin-top: 30px;
             }
         }
 
@@ -126,17 +138,17 @@
         object-fit: contain;
         position: relative;
         top: 162px;
-        width: 270px;
+        width: 600px;
 
         @include lg-screen {
-            top: 20px;
-            width: 240px;
+            top: 40px;
+            width: 90%;
         }
     }
 
     .device-upper {
         top: 130px;
-        right: 35px;
+        right: 85px;
         @include animation(slow-hover 5s infinite alternate ease-in-out);
 
         @include lg-screen {
@@ -146,12 +158,14 @@
     }
 
     .device-lower {
-        right: -110px;
+        right: -80px;
+        width: 520px;
         @include animation(slow-hover 5s infinite alternate-reverse ease-in-out);
 
         @include lg-screen {
-            top: 40px;
+            top: 20px;
             right: -50px;
+            width: 450px;
         }
     }
 

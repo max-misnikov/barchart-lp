@@ -1,0 +1,218 @@
+nav {
+    align-items: center;
+    background-color: rgba($blue-color, .95);
+    box-shadow: 0 0 20px rgba(0, 0, 0, .25);
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 90;
+
+    .logo img {
+        height: 30px;
+    }
+
+    .main-nav {
+        display: flex;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+
+        @include lg-screen {
+            background-color: $blue-color;
+            display: none;
+            left: 0;
+            position: absolute;
+            top: 60px;
+            width: 100%;
+        }
+
+        &::before {
+            background: rgba(0, 0, 0, 0.5);
+            content: "";
+            height: 100vh;
+            left: 0;
+            top: 0;
+            position: absolute;
+            opacity: 0;
+            visibility: hidden;
+            width: 100%;
+            transition: all 0.3s;
+        }
+
+        &>li {
+            background-color: $blue-color;
+            cursor: pointer;
+            padding: 10px 20px;
+
+            &:hover {
+                color: $light-blue-color;
+            }
+
+            a {
+                color: #fff;
+            }
+        }
+    }
+
+    button {
+        padding: 10px 20px;
+        width: 200px;
+
+        @include lg-screen {
+            margin-right: 50px;
+            width: auto;
+        }
+    }
+
+    li.has-submenu {
+        padding-right: 40px;
+        position: relative;
+
+        &::after {
+            border: 2px solid transparent;
+            border-bottom-color: #fff;
+            border-left-color: #fff;
+            content: '';
+            display: block;
+            position: absolute;
+            top: 14px;
+            right: 20px;
+            height: 8px;
+            width: 8px;
+            transform: rotate(-45deg);
+        }
+
+        &:hover::after {
+            border-bottom-color: $light-blue-color;
+            border-left-color: $light-blue-color;
+        }
+
+        ul {
+            background: $blue-color;
+            box-shadow: 0 0 20px rgba(0, 0, 0, .25);
+            display: none;
+            list-style: none;
+            margin: 0;
+            margin-top: 10px;
+            left: 0;
+            padding: 0;
+            position: absolute;
+            width: 200px;
+
+            @include lg-screen {
+                background: none;
+                box-shadow: none;
+                padding: 0;
+                position: relative;
+                width: 100%;
+            }
+        }
+
+        a {
+            display: block;
+            padding: 8px 20px;
+            transition: all .2s ease-in-out;
+
+            &:hover {
+                background: #fff;
+                color: $blue-color;
+
+                @include lg-screen {
+                    background: none;
+                    color: #fff;
+                }
+            }
+        }
+
+        &:hover {
+            ul {
+                display: block;
+            }
+        }
+    }
+
+    // Hidden checkbox to triger mobile nav
+    input[type="checkbox"] {
+        position: absolute;
+        opacity: 0;
+        visibility: hidden;
+
+        // Nav open styling - achieved with ':checked' selector
+        &:checked+label {
+            border-color: transparent;
+            transform: rotate(-135deg);
+
+            &::after {
+                background: #fff;
+                opacity: 1;
+                top: 6px;
+                left: 0px;
+                visibility: visible;
+                width: 24px;
+            }
+        }
+
+        &:checked~.main-nav {
+            display: block;
+
+            &::before {
+                opacity: 1;
+                visibility: visible;
+            }
+
+            li {
+                opacity: 1;
+                visibility: visible;
+                transform: translateY(0);
+            }
+        }
+    }
+
+    // Styling of the linked label element
+    label {
+        background: none transparent;
+        border: 4px solid #fff;
+        border-left: 0 solid transparent;
+        border-right: 0 solid transparent;
+        cursor: pointer;
+        display: none;
+        height: 24px;
+        position: absolute;
+        right: 20px;
+        width: 24px;
+        transform-origin: center;
+        transition: all .2s;
+
+        @include lg-screen {
+            display: block;
+        }
+
+        &::before {
+            background: #fff;
+            content: '';
+            height: 4px;
+            left: 0;
+            position: absolute;
+            top: 6px;
+            width: 24px;
+            transition: all .2s;
+        }
+
+        &::after {
+            background: #fff;
+            content: '';
+            height: 4px;
+            left: 0;
+            position: absolute;
+            top: 6px;
+            opacity: 0;
+            visibility: hidden;
+            width: 100%;
+            transform: rotate(90deg);
+            transition: all .2s;
+        }
+    }
+}

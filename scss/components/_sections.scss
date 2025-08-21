@@ -1,3 +1,60 @@
+// Bonuses section
+.bonuses {
+    .main-title {
+        margin-top: 120px;
+        text-align: center;
+
+        @include lg-screen {
+            margin-top: 60px;
+        }
+    }
+
+    .bonuses-wrapper {
+        display: flex;
+        justify-content: space-around;
+        margin-top: 60px;
+
+        @include lg-screen {
+            align-items: center;
+            flex-direction: column;
+        }
+    }
+
+    .bonus {
+        width: 40%;
+
+        @include lg-screen {
+            width: 75%;
+        }
+
+        img {
+            width: 100%;
+        }
+
+        &:last-of-type {
+            @include lg-screen {
+                margin-top: 30px;
+            }
+        }
+    }
+
+    .disclaimer {
+        color: #fff;
+        font-size: 18px;
+        margin-top: 14px;
+        text-align: center;
+
+        @include lg-screen {
+            font-size: 16px;
+        }
+
+        span {
+            color: $light-blue-color;
+            font-weight: 600;
+        }
+    }
+}
+
 // Instruments section
 .instruments {
     display: flex;
@@ -75,8 +132,8 @@
 .academy-laptop {
     position: absolute;
     right: -28px;
-    top: 64px;
-    width: 700px;
+    top: 124px;
+    width: 620px;
     // @include animation(axis-rotate 5s infinite alternate ease-in-out);
 
     @include lg-screen {
@@ -203,6 +260,7 @@
 
     @include md-screen {
         font-size: 32px;
+        margin-top: 60px;
     }
 }
 

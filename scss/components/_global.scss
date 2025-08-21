@@ -4,7 +4,7 @@ body {
 }
 
 body {
-    background: url(../assets/bg-blue-repeat.png) repeat;
+    background: url(../assets/bg-blue-repeat-clean.png) repeat;
     font-family: $font-family;
 }
 
@@ -36,13 +36,21 @@ p {
     font-size: $text-small;
 }
 
+.mobile-break {
+    display: none;
+
+    @include lg-screen {
+        display: block;
+    }
+}
+
 button {
     border: none;
     border-radius: 10px;
     color: #fff;
     font-size: 18px;
-    font-weight: 700;
-    padding: 20px 20px;
+    font-weight: 500;
+    padding: 14px 20px;
     outline: none;
     width: 230px;
     transition: .4s ease;
